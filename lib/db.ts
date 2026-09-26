@@ -34,11 +34,14 @@ function defaultWeddingAt(): number {
   return new Date(new Date().getFullYear(), 10, 25, 12, 0, 0, 0).getTime();
 }
 
+/** Used as the on-screen fallback while the database is still opening; the seed writes the same. */
+export const DEFAULT_WEDDING_AT = defaultWeddingAt();
+
 const DEFAULT_SETTINGS: WeddingSettings = {
   id: "main",
   partnerA: "Dhama",
   partnerB: "Dhama",
-  weddingAt: defaultWeddingAt(),
+  weddingAt: DEFAULT_WEDDING_AT,
 };
 
 /** What a first visit opens to. An app that opens empty looks broken. */
