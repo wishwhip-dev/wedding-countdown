@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -126,14 +125,15 @@ export function Checklist() {
                   aria-label={`Mark “${task.label}” as done`}
                   className="shrink-0"
                 />
-                <span
+                <button
+                  type="button"
                   onClick={() => void setTaskDone(task.id, !task.done)}
-                  className={`min-w-0 flex-1 cursor-pointer break-words text-sm leading-5 ${
+                  className={`min-w-0 flex-1 text-left text-sm leading-5 break-words ${
                     task.done ? "text-muted-foreground line-through" : ""
                   }`}
                 >
                   {task.label}
-                </span>
+                </button>
                 <Button
                   variant="ghost"
                   size="sm"
