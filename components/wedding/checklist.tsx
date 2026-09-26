@@ -97,13 +97,11 @@ export function Checklist() {
   return (
     <Card>
       <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-3 space-y-0">
-        <div className="space-y-1">
+        <div className="space-y-1.5">
           <CardTitle>Before the day</CardTitle>
-          <CardDescription>
-            <Badge variant="secondary" className="tabular-nums">
-              {done} of {visible.length} done
-            </Badge>
-          </CardDescription>
+          <Badge variant="secondary" className="tabular-nums">
+            {done} of {visible.length} done
+          </Badge>
         </div>
         <Button onClick={() => setAddOpen(true)}>Add task</Button>
       </CardHeader>
