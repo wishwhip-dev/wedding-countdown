@@ -9,7 +9,7 @@ import { Checklist } from "@/components/wedding/checklist";
 import { database, DEFAULT_WEDDING_AT, type WeddingSettings } from "@/lib/db";
 import { getSettings } from "@/lib/data/wedding";
 import { formatDateLong, formatTime } from "@/lib/format";
-import { useDatabaseTransfer, useStorageStatus } from "@/lib/storage/react";
+import { useDatabaseTransfer, useStorageStatus, useStoredQuery } from "@/lib/storage/react";
 
 /**
  * Shown while the database is still opening. The seed writes exactly these values on a first
