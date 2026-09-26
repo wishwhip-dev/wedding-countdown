@@ -60,7 +60,7 @@ export function EditDetailsDialog({ settings }: { settings: WeddingSettings }) {
           Edit details
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-sm">
+      <DialogContent className="w-[calc(100%-2rem)] max-w-sm">
         <DialogHeader>
           <DialogTitle>Edit details</DialogTitle>
           <DialogDescription>

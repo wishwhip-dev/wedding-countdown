@@ -50,7 +50,7 @@ function AddTaskDialog({ open, onOpenChange }: { open: boolean; onOpenChange: (o
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-sm">
+      <DialogContent className="w-[calc(100%-2rem)] max-w-sm">
         <DialogHeader>
           <DialogTitle>Add a task</DialogTitle>
           <DialogDescription>One thing you still need to do before the day.</DialogDescription>
