@@ -7,6 +7,7 @@ import { Countdown } from "@/components/wedding/countdown";
 import { EditDetailsDialog } from "@/components/wedding/edit-details-dialog";
 import { Checklist } from "@/components/wedding/checklist";
 import { database, DEFAULT_WEDDING_AT, type WeddingSettings } from "@/lib/db";
+import { getSettings } from "@/lib/data/wedding";
 import { formatDateLong, formatTime } from "@/lib/format";
 import { useDatabaseTransfer, useStorageStatus } from "@/lib/storage/react";
 
@@ -66,7 +67,7 @@ function TransferFooter() {
 
 export function WeddingApp() {
   const status = useStorageStatus(database);
-  const { data: settings } = useStoredQuery(database, () => getSettingsSafe());
+  const { data: settings } = useStoredQuery(database, getSettingsSafe);
   const current = settings ?? FALLBACK_SETTINGS;
 
   return (
