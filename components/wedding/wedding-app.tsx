@@ -102,9 +102,7 @@ export function WeddingApp() {
   );
 }
 
-// Imported here rather than at the top so the fallback above stays the only thing rendered before
-// the database opens — but the query itself still goes through the data module, never Dexie.
-import { getSettings } from "@/lib/data/wedding";
+/** The seed guarantees the settings row; a database without one falls back to the seed defaults. */
 function getSettingsSafe(): Promise<WeddingSettings> {
   return getSettings().catch(() => FALLBACK_SETTINGS);
 }
